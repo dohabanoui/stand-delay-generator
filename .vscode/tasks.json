@@ -1,0 +1,18 @@
+{
+  "version": "2.0.0",
+  "options": { "cwd": "${workspaceFolder}", "env": { "PYTHONUTF8": "1" } },
+  "presentation": { "reveal": "always", "panel": "dedicated" },
+  "tasks": [
+    { "label": "pipeline: prepare", "type": "shell", "command": "python -m delaygen.prepare" },
+    { "label": "pipeline: fit", "type": "shell", "command": "python -m delaygen.fit" },
+    { "label": "pipeline: eda", "type": "shell", "command": "python -m delaygen.analysis.eda" },
+    { "label": "exp: validation E1/E2 (complet, ~10 min)", "type": "shell", "command": "python -m delaygen.experiments.run_validation --n-scenarios 100" },
+    { "label": "exp: allocation E3 (complet, ~1h45)", "type": "shell", "command": "python -m delaygen.experiments.run_allocation --every 3 --buffers 5 15 --n-scenarios 100" },
+    { "label": "exp: sensibilité E4 (~15 min)", "type": "shell", "command": "python -m delaygen.experiments.run_sensitivity --max-days 30" },
+    { "label": "tables: literature + make_tables", "type": "shell", "command": "python -m delaygen.experiments.literature_table; python -m delaygen.experiments.make_tables" },
+    { "label": "tests", "type": "shell", "command": "python -m pytest -q", "group": { "kind": "test", "isDefault": true } },
+    { "label": "TOUT (prepare -> fit -> eda -> E1..E4 -> tables)", "dependsOrder": "sequence",
+      "dependsOn": ["pipeline: prepare", "pipeline: fit", "pipeline: eda", "exp: validation E1/E2 (complet, ~10 min)", "exp: allocation E3 (complet, ~1h45)", "exp: sensibilité E4 (~15 min)", "tables: literature + make_tables"],
+      "group": { "kind": "build", "isDefault": true } }
+  ]
+}

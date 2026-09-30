@@ -1,0 +1,8 @@
+Référence,Données,Objectif,Niveau d'analyse,Lien avec l'allocation de stands
+"Tu, Ball & Jank (2008) JASA","retards de départ, une compagnie à Denver †","loi de retard de départ (mélange, tendance saisonnière)",vol,non
+Deshpande & Arikan (2012) MSOM,BTS On-Time Performance,effet des horaires (block time) sur les retards,vol / compagnie,non
+Rebollo & Balakrishnan (2014) TR-C,"BTS / ASPM, réseau US","prédiction des retards réseau (classification, régression)",réseau / paire OD,non
+Kafle & Zou (2016) TR-B,BTS On-Time Performance,propagation des retards (approche analytique-économétrique),rotation / compagnie,non
+Sternberg et al. (2017) arXiv,revue (BTS majoritaire),revue des méthodes de prédiction de retards,—,non
+Wu et al. (2024) TR-E,"revue (BTS, Eurocontrol)","revue : propagation des retards, données et méthodes",—,non
+Cette étude (2026),"BTS On-Time Performance 2023–2024, hub CLT + registre FAA","générateur de scénarios (marginales, copule, propagation, régimes) validé sur les conflits de stands",rotation au hub (arrivée + départ),oui

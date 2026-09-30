@@ -1,0 +1,20 @@
+{
+  "n_days": 122,
+  "buffers": [
+    5.0,
+    15.0
+  ],
+  "n_scenarios": 100,
+  "modes": [
+    "unconditional",
+    "conditioned"
+  ],
+  "milp_runtime_mean": 29.845172525429334,
+  "milp_status": {
+    "GREEDY_FALLBACK": 220,
+    "FEASIBLE": 24
+  },
+  "milp_unassigned_mean": 1.2336065573770492,
+  "stands_mean": 124.72950819672131,
+  "rotations_mean": 670.311475409836
+}

@@ -1,0 +1,176 @@
+{
+  "hub": "CLT",
+  "A": {
+    "mean": 5.4835327897435135,
+    "median": -6.0,
+    "std": 41.72032151822256,
+    "share_gt15": 0.19696104108084847,
+    "q95": 84.0,
+    "q99": 198.0,
+    "share_early": 0.6115706975904479
+  },
+  "D": {
+    "mean": 13.445566432530523,
+    "median": -1.0,
+    "std": 38.71624676999856,
+    "share_gt15": 0.23014554297776735,
+    "q95": 91.0
+  },
+  "cause_shares_pct": {
+    "CarrierDelay": 26.35813475391626,
+    "WeatherDelay": 5.195532368174943,
+    "NASDelay": 18.54729620254309,
+    "SecurityDelay": 0.22837794760532854,
+    "LateAircraftDelay": 49.670658727760376
+  },
+  "E_D_given_A": [
+    {
+      "A_bin": "<-15",
+      "n": "95185",
+      "mean_D": "2.493712244576351",
+      "median_D": "-4.0",
+      "q90_D": "16.0",
+      "share_D_gt15": "0.10044649892314965"
+    },
+    {
+      "A_bin": "-15\u20130",
+      "n": "126172",
+      "mean_D": "4.582094283993279",
+      "median_D": "-3.0",
+      "q90_D": "21.0",
+      "share_D_gt15": "0.12563009225501695"
+    },
+    {
+      "A_bin": "0\u201315",
+      "n": "60207",
+      "mean_D": "8.947464580530504",
+      "median_D": "0.0",
+      "q90_D": "31.0",
+      "share_D_gt15": "0.18801800455096584"
+    },
+    {
+      "A_bin": "15\u201330",
+      "n": "23636",
+      "mean_D": "18.552589270604162",
+      "median_D": "12.0",
+      "q90_D": "45.0",
+      "share_D_gt15": "0.40941783719749536"
+    },
+    {
+      "A_bin": "30\u201345",
+      "n": "10854",
+      "mean_D": "30.780173208033904",
+      "median_D": "26.0",
+      "q90_D": "62.0",
+      "share_D_gt15": "0.6809471162704993"
+    },
+    {
+      "A_bin": "45\u201360",
+      "n": "6549",
+      "mean_D": "42.572301114674",
+      "median_D": "40.0",
+      "q90_D": "78.0",
+      "share_D_gt15": "0.7924874026568942"
+    },
+    {
+      "A_bin": "60\u201390",
+      "n": "7580",
+      "mean_D": "57.25725593667546",
+      "median_D": "58.0",
+      "q90_D": "100.0",
+      "share_D_gt15": "0.8174142480211082"
+    },
+    {
+      "A_bin": "90\u2013120",
+      "n": "4368",
+      "mean_D": "75.89949633699634",
+      "median_D": "84.0",
+      "q90_D": "129.0",
+      "share_D_gt15": "0.8104395604395604"
+    },
+    {
+      "A_bin": ">120",
+      "n": "7460",
+      "mean_D": "96.17654155495978",
+      "median_D": "99.0",
+      "q90_D": "200.0",
+      "share_D_gt15": "0.7564343163538874"
+    }
+  ],
+  "A_by_regime": {
+    "mean": {
+      "degrade": 21.545072489783852,
+      "normal": 0.5712264973550442
+    },
+    "median": {
+      "degrade": 2.0,
+      "normal": -7.0
+    },
+    "share_gt15": {
+      "degrade": 0.3469689450175813,
+      "normal": 0.15108220354856836
+    },
+    "size": {
+      "degrade": 94703,
+      "normal": 309646
+    }
+  },
+  "dispersion_index_hourly_late_counts": 3.865964930899639,
+  "daily_mean_delay": {
+    "std": 12.028853518953298,
+    "q80": 12.54136690647482,
+    "max": 95.60436893203884,
+    "lag1_autocorr": 0.5183077884801955
+  },
+  "carrier_share": {
+    "AA": 0.5905,
+    "OH": 0.253,
+    "DL": 0.0297,
+    "MQ": 0.0267,
+    "NK": 0.0215,
+    "UA": 0.0199,
+    "WN": 0.0159,
+    "9E": 0.0134
+  },
+  "category_share": {
+    "NB": 0.7033,
+    "RJ": 0.293,
+    "WB": 0.0037
+  },
+  "prepare_report": {
+    "hub": "CLT",
+    "raw_rows": 825306,
+    "aircraft_category": {
+      "faa": 801250,
+      "carrier_flight": 8059,
+      "default": 66,
+      "carrier_default": 9,
+      "category_counts": {
+        "NB": 557085,
+        "RJ": 250284,
+        "WB": 2015
+      }
+    },
+    "regime_source": "bts_fallback",
+    "regime_thresholds": {
+      "mean_delay_q": 11.045719988652714,
+      "mean_delay_median": 1.2815356489945156,
+      "weather_share_threshold": 0.35
+    },
+    "regime_counts": {
+      "normal": 559,
+      "degrade": 172
+    },
+    "rotations": {
+      "arrivals": 404349,
+      "departures": 405035,
+      "matched_pairs": 342011,
+      "match_rate_arrivals": 0.8458,
+      "match_rate_departures": 0.8444,
+      "open_rotations": 62338,
+      "first_departures": 63024,
+      "arrivals_without_tail": 0,
+      "rotations_total": 467373
+    }
+  }
+}

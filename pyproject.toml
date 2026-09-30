@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "delaygen"
+version = "0.1.0"
+description = "Correlated flight-delay scenario generator with turnaround propagation for robust airport stand allocation (calibrated on public BTS data)"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Khalid Tizra" }]
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "statsmodels",
+    "pyarrow",
+    "pyyaml",
+    "ortools",
+    "matplotlib",
+    "seaborn",
+    "tabulate",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+delaygen = "delaygen.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["delaygen*"]
+
+[tool.setuptools.package-data]
+delaygen = ["config/*.yaml", "config/*.csv"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

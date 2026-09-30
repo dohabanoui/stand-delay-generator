@@ -1,0 +1,36 @@
+{
+  "hub": "CLT",
+  "raw_rows": 825306,
+  "aircraft_category": {
+    "faa": 801250,
+    "carrier_flight": 8059,
+    "default": 66,
+    "carrier_default": 9,
+    "category_counts": {
+      "NB": 557085,
+      "RJ": 250284,
+      "WB": 2015
+    }
+  },
+  "regime_source": "bts_fallback",
+  "regime_thresholds": {
+    "mean_delay_q": 11.045719988652714,
+    "mean_delay_median": 1.2815356489945156,
+    "weather_share_threshold": 0.35
+  },
+  "regime_counts": {
+    "normal": 559,
+    "degrade": 172
+  },
+  "rotations": {
+    "arrivals": 404349,
+    "departures": 405035,
+    "matched_pairs": 342011,
+    "match_rate_arrivals": 0.8458,
+    "match_rate_departures": 0.8444,
+    "open_rotations": 62338,
+    "first_departures": 63024,
+    "arrivals_without_tail": 0,
+    "rotations_total": 467373
+  }
+}

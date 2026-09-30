@@ -1,0 +1,11 @@
+{
+  "generation_seconds_total": {
+    "independent": 50.54895544052124,
+    "hour_region": 50.655823707580566,
+    "proposed_noprop": 54.36014795303345,
+    "proposed": 54.6248095035553
+  },
+  "n_days": 366,
+  "n_scenarios": 100,
+  "rotations_per_day_mean": 670.3688524590164
+}

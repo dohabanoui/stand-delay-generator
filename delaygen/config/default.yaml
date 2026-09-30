@@ -1,0 +1,55 @@
+hub: CLT
+train_period: {start: "2023-01-01", end: "2023-12-31"}
+test_period:  {start: "2024-01-01", end: "2024-12-31"}
+paths:
+  bts_raw: data/raw/bts
+  bts_hub: data/processed            # bts_<HUB>_<YEAR>.parquet
+  faa_registry: data/raw/faa/ReleasableAircraft.zip
+  metar: null                         # data/raw/metar/KCLT.csv (optionnel)
+  processed: data/processed
+  results: results
+cleaning:
+  max_delay: 360
+  max_turnaround: 720
+  overnight_stay: 480
+regime:
+  states: [normal, degrade]
+  ifr_hours_threshold: 3
+  wind_kt_threshold: 25
+  fallback_weather_share: 0.35        # part (WeatherDelay+NASDelay) du retard total du jour
+  fallback_mean_delay_quantile: 0.80  # ou retard moyen d'arrivée > Q80 des jours
+marginals:
+  method: quantile                    # quantile | parametric
+  hour_block_size: 1
+  min_obs_per_class: 200
+  grid_points: 199
+dependence:
+  method: moments                     # moments | mixedlm
+  lambda_by_regime: true
+  max_pairs_per_day: 20000
+propagation:
+  enabled: true
+  mtt_quantile: 0.05
+  mtt_min_A: 30
+  mtt_default: {RJ: 25, NB: 35, WB: 60}
+ground:
+  rho_G: 0.3
+  composition: max          # max : D = max(A - slack, G) (turnaround critique) | additive : D = D_react + G
+generation:
+  n_scenarios: 100
+  seed: 42
+  forced_regime: null
+  peak_multiplier: 1.0
+  weather_shift: 0
+  correlation_scale: 1.0
+  allow_early_departure: true   # 50 % des départs BTS sont anticipés ; false -> G tronqué à 0
+allocation:
+  target_peak_occupancy: 0.88
+  # parts adaptées au mix de trafic domestique de CLT (WB 0.4 %, NB 70 %, RJ 29 % des rotations) ;
+  # le cahier des charges proposait {WB 0.15, NB 0.70, RJ 0.15}, inadapté à un trafic BTS sans long-courrier.
+  stand_shares: {WB: 0.03, NB: 0.67, RJ: 0.30}
+  buffer_minutes: [5, 15, 30]   # 5 = marge opérationnelle minimale (allocation nominale) ; 0 crée des conflits sans retard
+  b_ops: 5
+  time_limit_s: 20          # CP-SAT avec indice glouton ; FEASIBLE en pratique (banc d'essai, pas d'optimalité requise)
+  solver: cpsat
+pax_by_category: {RJ: 60, NB: 140, WB: 250}

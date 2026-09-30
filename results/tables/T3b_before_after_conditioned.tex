@@ -1,0 +1,20 @@
+\begin{table}
+\caption{Avant / après — impact opérationnel (mode conditioned, b = 5 min)}
+\label{tab:T3b_conditioned}
+\begin{tabular}{lrrrrr}
+\toprule
+Indicateur (b = 5 min, moyenne par jour) & Réel (BTS 2024) & Avant : indépendant & Avant : heure+région (≈ Dijk et al.) & Après : proposé sans propagation & Après : proposé complet \\
+\midrule
+Conflits de stands / jour & 143.20 & 125.65 & 125.62 & 102.16 & 130.20 \\
+Écart au réel (\%) & 0.00 & -12.25 & -12.28 & -28.66 & -9.07 \\
+MAE journalière (conflits) & 0.00 & 21.20 & 21.17 & 41.15 & 18.45 \\
+Corrélation jour à jour avec le réel & 1.00 & 0.72 & 0.72 & 0.57 & 0.70 \\
+Spearman jour à jour & 1.00 & 0.71 & 0.71 & 0.57 & 0.69 \\
+AUC détection des jours de pointe (Q90) & 1.00 & 0.89 & 0.90 & 0.62 & 0.83 \\
+Minutes de chevauchement / jour & 5446.12 & 3529.34 & 3528.26 & 2052.95 & 3882.91 \\
+Réaffectations / jour & 356.89 & 340.53 & 341.51 & 295.04 & 340.00 \\
+Réel dans [Q5, Q95] des scénarios & 1.00 & 0.41 & 0.60 & 0.23 & 0.65 \\
+Jours où le réel dépasse tous les scénarios & 0.00 & 0.38 & 0.25 & 0.56 & 0.20 \\
+\bottomrule
+\end{tabular}
+\end{table}

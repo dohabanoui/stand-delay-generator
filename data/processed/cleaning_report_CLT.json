@@ -1,0 +1,11 @@
+{
+  "input": 825306,
+  "cancelled": 9680,
+  "diverted": 1732,
+  "missing_key": 0,
+  "missing_delay": 0,
+  "extreme_delay": 4510,
+  "missing_tail_kept": 0,
+  "output": 809384,
+  "excluded_share": 0.0193
+}

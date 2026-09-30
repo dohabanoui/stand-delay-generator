@@ -1,0 +1,13 @@
+,train (2023),test (2024),total
+Vols (arr.+dép.),383699.0,425685.0,809384.0
+Arrivées,191673.0,212676.0,404349.0
+Jours,365.0,366.0,731.0
+Arrivées/jour,525.1,581.1,553.1
+Compagnies,12.0,12.0,12.0
+Immatriculations,3551.0,3584.0,3918.0
+Rotations appariées,161681.0,180330.0,342011.0
+Taux d'appariement (%),84.4,84.8,84.6
+Retard arr. moyen (min),4.1,6.7,5.5
+Arrivées > 15 min (%),18.1,21.2,19.7
+Q95 retard arr. (min),77.0,90.0,84.0
+Jours dégradés,76.0,96.0,172.0

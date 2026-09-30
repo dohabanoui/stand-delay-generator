@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+
+# Data: public but large, re-downloadable with scripts/ (see data/README.md)
+data/raw/
+data/processed/*.parquet
+data/processed/*.log
+
+# OS / editors
+.DS_Store
+Thumbs.db

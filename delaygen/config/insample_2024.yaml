@@ -1,0 +1,21 @@
+# Variante « in-sample » : estimation ET validation sur 2024 -> sépare la dérive temporelle 2023->2024
+# de l'erreur de modèle. Résultats dans results_insample_2024/.
+hub: CLT
+train_period: {start: "2024-01-01", end: "2024-12-31"}
+test_period:  {start: "2024-01-01", end: "2024-12-31"}
+paths:
+  bts_raw: data/raw/bts
+  bts_hub: data/processed
+  faa_registry: data/raw/faa/ReleasableAircraft.zip
+  metar: null
+  processed: data/processed
+  results: results_insample_2024
+cleaning: {max_delay: 360, max_turnaround: 720, overnight_stay: 480}
+regime: {states: [normal, degrade], ifr_hours_threshold: 3, wind_kt_threshold: 25, fallback_weather_share: 0.35, fallback_mean_delay_quantile: 0.80}
+marginals: {method: quantile, hour_block_size: 1, min_obs_per_class: 200, grid_points: 199}
+dependence: {method: moments, lambda_by_regime: true, max_pairs_per_day: 20000}
+propagation: {enabled: true, mtt_quantile: 0.05, mtt_min_A: 30, mtt_default: {RJ: 25, NB: 35, WB: 60}}
+ground: {rho_G: 0.3, composition: max}
+generation: {n_scenarios: 100, seed: 42, forced_regime: null, peak_multiplier: 1.0, weather_shift: 0, correlation_scale: 1.0, allow_early_departure: true}
+allocation: {target_peak_occupancy: 0.88, stand_shares: {WB: 0.03, NB: 0.67, RJ: 0.30}, buffer_minutes: [5, 15], b_ops: 5, time_limit_s: 1, solver: cpsat}
+pax_by_category: {RJ: 60, NB: 140, WB: 250}

@@ -1,0 +1,4 @@
+régime,lambda_d,lambda_h,lambda_c,lambda_r,sigma_eps,corr. même jour,corr. jour+heure,corr. jour+compagnie,corr. jour+région
+all,0.113,0.163,0.144,0.19,0.951,0.013,0.039,0.033,0.049
+normal,0.118,0.113,0.145,0.188,0.958,0.014,0.027,0.035,0.049
+degrade,0.103,0.27,0.155,0.196,0.924,0.011,0.084,0.035,0.049

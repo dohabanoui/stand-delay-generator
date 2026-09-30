@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    { "name": "1. prepare (BTS -> rotations)", "type": "debugpy", "request": "launch", "module": "delaygen.prepare", "console": "integratedTerminal", "cwd": "${workspaceFolder}", "env": { "PYTHONUTF8": "1" } },
+    { "name": "2. fit (M1..M5)", "type": "debugpy", "request": "launch", "module": "delaygen.fit", "console": "integratedTerminal", "cwd": "${workspaceFolder}", "env": { "PYTHONUTF8": "1" } },
+    { "name": "3. eda (figures exploratoires)", "type": "debugpy", "request": "launch", "module": "delaygen.analysis.eda", "console": "integratedTerminal", "cwd": "${workspaceFolder}", "env": { "PYTHONUTF8": "1" } },
+    { "name": "4. validation E1/E2 (rapide : 30 jours)", "type": "debugpy", "request": "launch", "module": "delaygen.experiments.run_validation", "args": ["--max-days", "30", "--n-scenarios", "50"], "console": "integratedTerminal", "cwd": "${workspaceFolder}", "env": { "PYTHONUTF8": "1" } },
+    { "name": "5. allocation E3 (rapide : 5 jours)", "type": "debugpy", "request": "launch", "module": "delaygen.experiments.run_allocation", "args": ["--max-days", "5", "--buffers", "5", "15", "--n-scenarios", "50"], "console": "integratedTerminal", "cwd": "${workspaceFolder}", "env": { "PYTHONUTF8": "1" } },
+    { "name": "6. sensibilité E4 (rapide : 5 jours)", "type": "debugpy", "request": "launch", "module": "delaygen.experiments.run_sensitivity", "args": ["--max-days", "5"], "console": "integratedTerminal", "cwd": "${workspaceFolder}", "env": { "PYTHONUTF8": "1" } },
+    { "name": "7. tableaux finaux (make_tables)", "type": "debugpy", "request": "launch", "module": "delaygen.experiments.make_tables", "console": "integratedTerminal", "cwd": "${workspaceFolder}", "env": { "PYTHONUTF8": "1" } },
+    { "name": "Tests (pytest)", "type": "debugpy", "request": "launch", "module": "pytest", "args": ["-q", "tests"], "console": "integratedTerminal", "cwd": "${workspaceFolder}" }
+  ]
+}

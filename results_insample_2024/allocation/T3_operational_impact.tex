@@ -1,0 +1,26 @@
+\begin{table}
+\caption{E3 — Impact opérationnel : conflits de stands réels vs générés (période test)}
+\label{tab:T3}
+\begin{tabular}{lrlrrrrrrrrrrrrrrrrrrl}
+\toprule
+mode & buffer & generator & conflicts\_per\_day\_real & conflicts\_per\_day\_gen & bias\_pct & mae\_daily & corr\_daily & spearman\_daily & peak\_auc & overlap\_real & overlap\_gen & reassign\_real & reassign\_gen & waiting\_real & waiting\_gen & peak\_days & peak\_detection\_rate & peak\_false\_alarm\_rate & coverage\_real\_in\_scenarios & real\_above\_all\_scenarios & generator\_label \\
+\midrule
+unconditional & 5.00 & independent & 143.20 & 134.71 & -5.92 & 17.47 & 0.61 & 0.59 & 0.67 & 5446.12 & 4225.89 & 356.89 & 356.51 & 6.81 & 4.88 & 12 & 0.00 & 0.00 & 0.71 & 0.10 & Indépendant (marginales seules) \\
+unconditional & 5.00 & hour\_region & 143.20 & 134.62 & -5.99 & 17.54 & 0.61 & 0.59 & 0.67 & 5446.12 & 4225.24 & 356.89 & 356.67 & 6.81 & 5.41 & 12 & 0.00 & 0.00 & 0.80 & 0.07 & Heure+région, sans propagation \\
+unconditional & 5.00 & proposed\_noprop & 143.20 & 107.55 & -24.89 & 35.95 & 0.61 & 0.60 & 0.65 & 5446.12 & 2467.03 & 356.89 & 304.88 & 6.81 & 2.11 & 12 & 0.00 & 0.00 & 0.33 & 0.41 & Proposé sans propagation (ablation) \\
+unconditional & 5.00 & proposed & 143.20 & 135.53 & -5.36 & 17.56 & 0.60 & 0.57 & 0.66 & 5446.12 & 4403.55 & 356.89 & 347.18 & 6.81 & 3.26 & 12 & 0.00 & 0.00 & 0.70 & 0.09 & Proposé (complet) \\
+unconditional & 15.00 & independent & 69.92 & 61.68 & -11.78 & 19.65 & 0.31 & 0.37 & 0.55 & 3595.08 & 2536.12 & 241.05 & 230.84 & 7.49 & 4.31 & 13 & 0.00 & 0.00 & 0.75 & 0.11 & Indépendant (marginales seules) \\
+unconditional & 15.00 & hour\_region & 69.92 & 61.67 & -11.79 & 19.64 & 0.31 & 0.38 & 0.55 & 3595.08 & 2535.74 & 241.05 & 231.97 & 7.49 & 4.52 & 13 & 0.00 & 0.00 & 0.76 & 0.07 & Heure+région, sans propagation \\
+unconditional & 15.00 & proposed\_noprop & 69.92 & 37.02 & -47.05 & 33.45 & 0.34 & 0.41 & 0.60 & 3595.08 & 1259.79 & 241.05 & 169.53 & 7.49 & 1.80 & 13 & 0.00 & 0.00 & 0.45 & 0.27 & Proposé sans propagation (ablation) \\
+unconditional & 15.00 & proposed & 69.92 & 60.90 & -12.90 & 20.32 & 0.24 & 0.30 & 0.50 & 3595.08 & 2744.30 & 241.05 & 216.65 & 7.49 & 3.13 & 13 & 0.00 & 0.00 & 0.82 & 0.06 & Proposé (complet) \\
+conditioned & 5.00 & independent & 143.20 & 134.07 & -6.37 & 16.44 & 0.73 & 0.72 & 0.91 & 5446.12 & 4072.01 & 356.89 & 354.62 & 6.81 & 5.38 & 12 & 0.00 & 0.00 & 0.54 & 0.25 & Indépendant (marginales seules) \\
+conditioned & 5.00 & hour\_region & 143.20 & 134.09 & -6.36 & 16.35 & 0.73 & 0.72 & 0.91 & 5446.12 & 4070.82 & 356.89 & 355.01 & 6.81 & 5.62 & 12 & 0.00 & 0.00 & 0.71 & 0.13 & Heure+région, sans propagation \\
+conditioned & 5.00 & proposed\_noprop & 143.20 & 107.86 & -24.67 & 35.76 & 0.58 & 0.58 & 0.64 & 5446.12 & 2401.87 & 356.89 & 306.13 & 6.81 & 2.97 & 12 & 0.00 & 0.00 & 0.34 & 0.48 & Proposé sans propagation (ablation) \\
+conditioned & 5.00 & proposed & 143.20 & 134.77 & -5.88 & 16.31 & 0.70 & 0.70 & 0.84 & 5446.12 & 4225.85 & 356.89 & 346.74 & 6.81 & 4.64 & 12 & 0.00 & 0.00 & 0.69 & 0.11 & Proposé (complet) \\
+conditioned & 15.00 & independent & 69.92 & 60.03 & -14.14 & 16.58 & 0.73 & 0.68 & 0.95 & 3595.08 & 2398.49 & 241.05 & 227.74 & 7.49 & 4.13 & 13 & 0.00 & 0.00 & 0.43 & 0.27 & Indépendant (marginales seules) \\
+conditioned & 15.00 & hour\_region & 69.92 & 60.00 & -14.19 & 16.55 & 0.74 & 0.68 & 0.95 & 3595.08 & 2397.50 & 241.05 & 228.77 & 7.49 & 4.74 & 13 & 0.00 & 0.00 & 0.50 & 0.23 & Heure+région, sans propagation \\
+conditioned & 15.00 & proposed\_noprop & 69.92 & 36.35 & -48.02 & 34.04 & 0.72 & 0.66 & 0.94 & 3595.08 & 1203.24 & 241.05 & 168.01 & 7.49 & 1.97 & 13 & 0.00 & 0.00 & 0.25 & 0.48 & Proposé sans propagation (ablation) \\
+conditioned & 15.00 & proposed & 69.92 & 59.15 & -15.41 & 17.30 & 0.70 & 0.64 & 0.94 & 3595.08 & 2598.67 & 241.05 & 214.13 & 7.49 & 2.97 & 13 & 0.00 & 0.00 & 0.76 & 0.06 & Proposé (complet) \\
+\bottomrule
+\end{tabular}
+\end{table}

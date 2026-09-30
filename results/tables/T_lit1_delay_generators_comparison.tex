@@ -1,0 +1,20 @@
+\begin{table}
+\caption{Positionnement : générateurs de retards pour l'allocation robuste de stands}
+\label{tab:lit1}
+\begin{tabular}{lllllllll}
+\toprule
+Référence & Aéroport / données & Données publiques & Marginales des retards & Corrélation entre vols & Propagation arrivée→départ & Régimes météo & Validation & Générateur ouvert \\
+\midrule
+Yan \& Tang (2007) EJOR & CKS Taipei † & non & lois ajustées sur historique † & non & non & non & simulation des affectations & non \\
+Şeker \& Noyan (2012) TRE & scénarios de retards (grand aéroport US) † & non & scénarios échantillonnés † & non & non & non & programmation stochastique (objectif) & non \\
+Diepen et al. (2012) J. Sched. & Amsterdam Schiphol & non & aucune (robustesse par temps libre) & non & non & non & rejeu sur retards réels † & non \\
+Castaing et al. (2016) COR & hub US (données compagnie) † & non & historique de retards échantillonné † & non & non & non & blocages de portes simulés & non \\
+Xu et al. (2017) TRB & cas d'étude (budget d'incertitude) & non & intervalles bornés (pas de loi) & budget global & non & non & pire cas partiel & non \\
+Dorndorf et al. (2017) OR Spectrum & hub européen (données privées) † & non & arrivées/départs stochastiques † & non & partiel (recours) † & non & simulation + stratégies de recours & non \\
+Dijk et al. (2019) OR Spectrum & São Paulo–Guarulhos (GRU) & non & loi par vol (normale, exp., gamma, Weibull) & signe de l'écart : région d'origine, fenêtre d'1 h & partiel (départ à l'horaire sauf rotation minimale) & non & 30 scénarios, recours (attente, réaffectation, remorquage) & non \\
+Bagamanova \& Mujica Mota (2020) JATM & aéroport (simulation) † & non & composante « delay-aware » (simulation) † & non & partiel † & non & simulation & non \\
+Park \& Ku (2026) Aerospace & Gimpo (GMP) & non & simulation fast-time des mouvements sol & implicite (simulation) & implicite (simulation) & non & une journée simulée & non \\
+Cette étude (2026) & Charlotte (CLT), BTS 2023–2024 & oui & quantiles empiriques par (heure, régime) [+ lois paramétriques, AIC] & copule gaussienne à facteurs : jour, heure, compagnie, région & oui (MTT, slack, retard réactionnel) & chaîne de Markov 2 états & 3 niveaux : statistique, structurel, opérationnel (conflits réels vs générés, 366 jours) & oui (package + benchmark) \\
+\bottomrule
+\end{tabular}
+\end{table}

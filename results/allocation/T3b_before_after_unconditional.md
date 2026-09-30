@@ -1,0 +1,12 @@
+| Indicateur (b = 5 min, moyenne par jour)    |   Réel (BTS 2024) |   Avant : indépendant |   Avant : heure+région (≈ Dijk et al.) |   Après : proposé sans propagation |   Après : proposé complet |
+|---------------------------------------------|-------------------|-----------------------|------------------------------------------|------------------------------------|---------------------------|
+| Conflits de stands / jour                   |            143.20 |                125.10 |                                   125.08 |                             102.01 |                    130.14 |
+| Écart au réel (%)                           |              0.00 |                -12.64 |                                   -12.65 |                             -28.77 |                     -9.12 |
+| MAE journalière (conflits)                  |              0.00 |                 21.76 |                                    21.89 |                              41.22 |                     19.25 |
+| Corrélation jour à jour avec le réel        |              1.00 |                  0.61 |                                     0.61 |                               0.60 |                      0.59 |
+| Spearman jour à jour                        |              1.00 |                  0.60 |                                     0.60 |                               0.59 |                      0.58 |
+| AUC détection des jours de pointe (Q90)     |              1.00 |                  0.67 |                                     0.68 |                               0.65 |                      0.65 |
+| Minutes de chevauchement / jour             |           5446.12 |               3471.38 |                                  3471.52 |                            2030.47 |                   3865.63 |
+| Réaffectations / jour                       |            356.89 |                340.94 |                                   341.73 |                             295.85 |                    341.27 |
+| Réel dans [Q5, Q95] des scénarios           |              1.00 |                  0.61 |                                     0.70 |                               0.23 |                      0.68 |
+| Jours où le réel dépasse tous les scénarios |              0.00 |                  0.23 |                                     0.16 |                               0.50 |                      0.13 |
